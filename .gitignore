@@ -1,0 +1,8 @@
+env/
+.history
+license_file
+license_key
+license
+valid_license
+
+*.json
