@@ -7,3 +7,5 @@ valid_license
 
 *.json
 *.egg-info
+*.pyc
+__pycache__
