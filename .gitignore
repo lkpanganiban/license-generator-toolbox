@@ -6,3 +6,4 @@ license
 valid_license
 
 *.json
+*.egg-info
