@@ -1,13 +1,13 @@
 import json
 from cryptography.fernet import Fernet
 
-class Licenser:
 
+class Licenser:
     def __init__(self):
         self.name = "Licenser"
         self.version = 0.1
         self.license_key = "license_key"
-        
+
     def generate_key(self, output_location: str = "license_key") -> None:
         """
         Generates a key and save it into a file
@@ -32,7 +32,12 @@ class Licenser:
         f = Fernet(key)
         return f.encrypt(encoded_content)
 
-    def generate_license_file(self, unecrypted_license_path: str, encrypted_license_path: str = "license", license_key: str = None) -> None:
+    def generate_license_file(
+        self,
+        unecrypted_license_path: str,
+        encrypted_license_path: str = "license",
+        license_key: str = None,
+    ) -> None:
         if license_key is not None:
             self.license_key = license_key
         print(f"generating encrypted version to: {encrypted_license_path}")
